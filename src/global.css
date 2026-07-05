@@ -50,7 +50,6 @@
 #root {
   max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
