@@ -1,12 +1,10 @@
-import { books } from "../src/constant/mockData";
+import Layout from "./Layouts/Layout";
+
 function App() {
   return (
-    <>
-      <h1 className="text-2xl">Book app</h1>
-      {books.map((book) => (
-        <p key={book.id}>{book.title}</p>
-      ))}
-    </>
+    <Layout>
+      <h1 className="text-2xl">Book app Content</h1>
+    </Layout>
   );
 }
 
