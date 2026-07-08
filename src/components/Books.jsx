@@ -4,9 +4,10 @@ import { books as bookData } from "../constant/mockData";
 import BookCard from "./BookCard";
 import SideCard from "./SideCard";
 import SearchBox from "./SearchBox";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 function Books() {
-  const [liked, setLiked] = useState([]);
+  const [liked, setLiked] = useLocalStorage("liked", []);
   const [search, setSearch] = useState([]);
   const [books, setBooks] = useState(bookData);
 
@@ -46,6 +47,7 @@ function Books() {
             <BookCard
               key={book.id}
               book={book}
+              liked={liked}
               handleLikeList={handleLikeList}
             />
           ))}

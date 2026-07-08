@@ -1,15 +1,10 @@
 import { useState } from "react";
 import { FaHeart } from "react-icons/fa6";
 
-function BookCard({ book, handleLikeList }) {
-  const [isLiked, setIsLiked] = useState(false);
-
+function BookCard({ book, handleLikeList, liked }) {
   const { id, title, author, image, language, pages } = book;
+  const isLiked = liked.some((item) => item.id === id);
 
-  const likeHandler = () => {
-    handleLikeList(book, isLiked);
-    setIsLiked((isLiked) => !isLiked);
-  };
   return (
     <div className="bg-[var(--bg-secondary)] p-4 mt-4 rounded-md flex">
       <img src={image} alt={title} className="rounded-sm" />
@@ -29,7 +24,7 @@ function BookCard({ book, handleLikeList }) {
           </span>
         </div>
       </div>
-      <button onClick={likeHandler}>
+      <button onClick={() => handleLikeList(book, isLiked)}>
         <FaHeart
           className={`text-2xl cursor-pointer transition-all duration-300 ${
             isLiked
