@@ -4,27 +4,20 @@
   /* Background */
   --bg-primary: #1e1e1e;
   --bg-secondary: #303030;
+  --bg-tertiary: #e0e0e0;
 
   /* Text */
   --text-primary: #e0e0e0;
   --text-secondary: #a5b2c4;
 
-  /* Border */
-  --border-color: #e2e8f0;
 
   /* Primary */
   --primary: #6552f4;
   --primary-hover: #7c6ee9;
 
-  /* Success */
-  --success: #22c55e;
-
   /* Danger */
   --danger-primary: #ef4444;
-  --danger-secondary: #ffebee;
-
-  /* Warning */
-  --warning: #f59e0b;
+ 
 
 
   /* Fonts */
