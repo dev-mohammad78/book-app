@@ -54,7 +54,7 @@ function Books() {
         </div>
         {!!liked.length && (
           <div className="flex-[1_1_0] h-fit p-4 bg-[var(--primary)] rounded-md md:ml-5 mt-4">
-            <h4 className="text-xl font-bold">Favorites</h4>
+            <h4 className="text-xl font-bold">Favorites | {liked.length}</h4>
             {liked.map((book) => (
               <SideCard key={book.id} book={book} />
             ))}
